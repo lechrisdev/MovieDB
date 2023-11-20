@@ -40,7 +40,7 @@ struct YearRangeSelectorView: View {
                             .padding(.trailing, 16)
                             .foregroundColor(.white.opacity(0.5))
                     }
-                    .background(Color("systemGray"))
+                    .background(Color("gray"))
                     .cornerRadius(10)
                 }.pickerStyle(.inline)
                 Menu {
@@ -60,7 +60,7 @@ struct YearRangeSelectorView: View {
                             .padding(.trailing, 16)
                             .foregroundColor(.white.opacity(0.5))
                     }
-                    .background(Color("systemGray"))
+                    .background(Color("gray"))
                     .cornerRadius(10)
                 }.pickerStyle(.inline)
             }

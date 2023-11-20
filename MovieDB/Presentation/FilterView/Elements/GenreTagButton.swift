@@ -27,7 +27,7 @@ enum ButtonState {
     var bgColor: Color {
         switch self {
         case .unselected:
-            return Color("systemGray").opacity(0.5)
+            return Color("gray").opacity(0.5)
         case .deletable:
             return Color.clear
         case .marked, .search:

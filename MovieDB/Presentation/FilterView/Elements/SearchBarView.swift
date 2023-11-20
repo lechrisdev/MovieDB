@@ -15,7 +15,7 @@ struct SearchBarView: View {
         ZStack(alignment: .trailing) {
 
             RoundedRectangle(cornerRadius: 10)
-                .foregroundStyle(Color("systemGray"))
+                .foregroundStyle(Color("gray"))
             RoundedRectangle(cornerRadius: 10)
                 .stroke(style: .init(lineWidth: 1))
                 .foregroundStyle(Color("statusColor"))

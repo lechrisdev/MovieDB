@@ -20,7 +20,7 @@ struct CategoryButton: View {
             RoundedRectangle(cornerRadius: 100)
                 .foregroundStyle(model.selected
                                  ? Color("statusColor")
-                                 : Color("systemGray").opacity(0.5))
+                                 : Color("gray").opacity(0.5))
             
             HStack(spacing: 8) {
                 Text(model.name.rawValue)
