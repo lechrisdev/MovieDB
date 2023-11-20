@@ -33,7 +33,7 @@ struct MainView: View {
                 CarouselView(type: .popular, movies: viewModel.topRatedMovies)
             }
         }
-        // 
+        // Move logic to MainViewModel
         .onReceive(filterViewModel.searchTapped, perform: { tap in
             guard tap != nil else { return }
             guard let searchRequest = filterViewModel.searchRequest.value else { return }

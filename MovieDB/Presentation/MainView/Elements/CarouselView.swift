@@ -43,10 +43,11 @@ struct CarouselView: View {
                     .foregroundStyle(Color("darkGrayColor"))
             }.padding(.horizontal, 16)
             ScrollView(.horizontal) {
-                LazyHStack(alignment: .top, spacing: 0) {
+                HStack(alignment: .top, spacing: 0) {
                     ForEach(movies, id: \.title) { movie in
                         MovieCell(cellSize: type == .nowPlaying || type == .searchResults ? .normal : .small, model: movie)
                             .padding(.bottom, 10)
+                            .fixedSize()
                     }
                 }
             }

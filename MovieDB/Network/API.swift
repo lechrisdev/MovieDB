@@ -101,7 +101,7 @@ enum Requests: EndPoint {
             let parameters: [String: Encodable] = [
                 "primary_release_date.gte": String(search.yearFrom) + "-01-01",
                 "primary_release_date.lte": String(search.yearTo) + "-12-31",
-                "with_genres": search.genres,
+                "with_genres": search.genres.map { String($0) }.joined(separator: ","),
                 "language": "en-US",
                 "page": 1
             ]
@@ -110,7 +110,7 @@ enum Requests: EndPoint {
             let parameters: [String: Encodable] = [
                 "first_air_date.gte": String(search.yearFrom) + "-01-01",
                 "first_air_date.lte": String(search.yearTo) + "-12-31",
-                "with_genres": search.genres,
+                "with_genres": search.genres.map { String($0) }.joined(separator: ","),
                 "language": "en-US",
                 "page": 1
             ]

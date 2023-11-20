@@ -41,6 +41,10 @@ class MainViewModel: ObservableObject {
                 case .tvseries:
                     searchResults = try await repository.searchTvShows(search: request)
                 }
+                print(">>>>>>>>>>>>> ❤️")
+                print(request)
+                print(">>>>>>>>>>>>> ❤️")
+                print(searchResults)
             } catch {
                 print(error)
             }

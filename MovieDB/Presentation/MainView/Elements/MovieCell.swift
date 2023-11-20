@@ -44,8 +44,10 @@ struct MovieCell: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             ZStack {
-                Image("defaultImage")
+                Image("default-movie")
                     .resizable()
+                    .scaledToFit()
+                    .cornerRadius(8)
                     .frame(width: cellSize.width, height: cellSize.height)
                 KFImage(URL(string: model.posterUrl))
                     .resizable()
@@ -58,6 +60,7 @@ struct MovieCell: View {
                     .font(.system(size: 17))
                     .fontWeight(.regular)
                     .foregroundStyle(Color("darkWhiteColor"))
+//                    .fixedSize(horizontal: false, vertical: true)
                 if let year = model.year {
                     Text(String(year))
                         .font(.system(size: 15))
