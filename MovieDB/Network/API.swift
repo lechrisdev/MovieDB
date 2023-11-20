@@ -119,7 +119,7 @@ enum Requests: EndPoint {
             let parameters: [String: Encodable] = [
                 "primary_release_date.gte": String(search.yearFrom) + "-01-01",
                 "primary_release_date.lte": String(search.yearTo) + "-12-31",
-                "with_genres": 16,
+                "with_genres": 16, // Cartoons genre id
                 "language": "en-US",
                 "page": 1
             ]

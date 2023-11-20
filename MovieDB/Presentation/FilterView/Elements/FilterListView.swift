@@ -53,7 +53,12 @@ struct FilterListView: View {
                     
                     switch type {
                     case .genres:
-                        SearchBarView(text: $viewModel.searchText)
+                        
+                            SearchBarView(text: $viewModel.searchText)
+                            .disabled(viewModel.genres.isEmpty)
+                            .saturation(viewModel.genres.isEmpty ? 0 : 1)
+                            .opacity(viewModel.genres.isEmpty ? 0.4 : 1)
+                        
                             VStack {
                                 _FlexibleView(availableWidth: UIScreen.main.bounds.width - 20,
                                               data: viewModel.genres,
